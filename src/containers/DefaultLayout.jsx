@@ -2,11 +2,9 @@ import React, { useState, useEffect, useReducer } from "react";
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import { Layout, BackTop, message } from "antd";
 import routes from "@/routes";
-import echarts from "echarts/lib/echarts";
 import avatar from "@/assets/images/user.jpg";
 import menus from "./menu";
 import "@/style/layout.scss";
-
 import AppHeader from "./AppHeader.jsx";
 import AppAside from "./AppAside.jsx";
 import AppFooter from "./AppFooter.jsx";
@@ -60,27 +58,6 @@ const DefaultLayout = props => {
     props.history.push("/login");
     message.success("登出成功!");
   };
-
-  useEffect(() => {
-    let { pathname } = props.location;
-    let timer;
-
-    // 菜单收缩展开时 echarts 图表的自适应
-    if (pathname === "/" || pathname === "/index") {
-      timer = setTimeout(() => {
-        echarts.init(document.getElementById("bar")).resize();
-        echarts.init(document.getElementById("line")).resize();
-        echarts.init(document.getElementById("pie")).resize();
-        echarts.init(document.getElementById("pictorialBar")).resize();
-        echarts.init(document.getElementById("scatter")).resize();
-      }, 500);
-    } else {
-      timer = null;
-    }
-    return () => {
-      timer && clearTimeout(timer);
-    };
-  });
 
   return (
     <Layout className="app">

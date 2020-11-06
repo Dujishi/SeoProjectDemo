@@ -8,7 +8,7 @@ const AppHeader = props => {
   let { menuClick, avatar, menuToggle, loginOut } = props;
   const menu = (
     <Menu>
-      <Menu.ItemGroup title="用户设置">
+      {/* <Menu.ItemGroup title="用户设置">
         <Menu.Divider />
         <Menu.Item>
           <Icon type="edit" />
@@ -19,7 +19,7 @@ const AppHeader = props => {
           系统设置
         </Menu.Item>
       </Menu.ItemGroup>
-      <Menu.Divider />
+      <Menu.Divider /> */}
       <Menu.Item>
         <span onClick={loginOut}>
           <Icon type="logout" /> 退出登录
@@ -37,7 +37,7 @@ const AppHeader = props => {
         />
       </div>
       <div className="right">
-        <div className="mr15">
+        {/* <div className="mr15">
           <a
             rel="noopener noreferrer"
             href="https://github.com/ltadpoles/react-admin"
@@ -55,7 +55,7 @@ const AppHeader = props => {
               <Icon type="bell" />
             </a>
           </Badge>
-        </div>
+        </div> */}
         <div>
           <Dropdown overlay={menu} overlayStyle={{ width: "20rem" }}>
             <div className="ant-dropdown-link">
