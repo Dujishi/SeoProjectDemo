@@ -9,6 +9,7 @@ import loadable from "./utils/loadable";
 import "animate.css";
 import "./style/base.scss";
 import "./style/App.scss";
+import "braft-editor/dist/index.css";
 
 // 公共模块
 const DefaultLayout = loadable(() =>

@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Layout, Icon } from "antd";
+import { Layout } from "antd";
 import CustomMenu from "@/components/CustomMenu";
+import logo from "../assets/images/logo.jpeg";
 
 const { Sider } = Layout;
 
@@ -9,14 +10,18 @@ const AppAside = props => {
   let { menuToggle, menu } = props;
   return (
     <Sider className="aside" collapsed={menuToggle}>
-      <div className="logo">
-        <a
-          rel="noopener noreferrer"
-          href="https://github.com/ltadpoles"
-          target="_blank"
-        >
-          <Icon type="github" style={{ fontSize: "3.8rem", color: "#fff" }} />
-        </a>
+      {/* <div className="logo">
+        <img src={logo} />
+      </div> */}
+      <div
+        style={{
+          color: "#fff",
+          fontSize: "30px",
+          fontWeight: "bold",
+          textAlign: "center"
+        }}
+      >
+        <i>Costco</i>
       </div>
       <CustomMenu menu={menu}></CustomMenu>
     </Sider>
