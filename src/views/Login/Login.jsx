@@ -3,16 +3,17 @@ import {
   Layout,
   Input,
   Icon,
-  Form,
   Button,
   Divider,
   message,
   notification
 } from "antd";
 import { withRouter } from "react-router-dom";
+import { Form } from "@ant-design/compatible";
 // import axios from '@/api'
 // import { API } from '@/api/config'
 import "@/style/view-style/login.scss";
+import "@ant-design/compatible/assets/index.css";
 
 const Login = props => {
   const [loading, setLoading] = useState(false);
