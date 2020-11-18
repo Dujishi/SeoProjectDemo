@@ -1,7 +1,7 @@
 import fetch from "./index";
 
-// const URL = 'http://costco.host:7001'
-const URL = "http://127.0.0.1:7001";
+const URL = "http://costco.host:7001";
+// const URL = "http://127.0.0.1:7001";
 
 export const productList = async data => {
   const opt = {

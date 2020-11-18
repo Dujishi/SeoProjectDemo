@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import style from "./product.module.scss";
+
 import BraftEditor from "braft-editor";
 import {
   Form,
@@ -211,7 +213,7 @@ export default () => {
   ];
 
   return (
-    <div className="product-page">
+    <div>
       <CustomCard>
         <Form
           layout="inline"
